@@ -1,5 +1,5 @@
 # Cassinate
-A hibernate-like support utility for cassandra.
+A hibernate-like support utility for cassandra. It automatically scans the classpath for classes annotated with [@Table](http://docs.datastax.com/en/drivers/java/2.1/com/datastax/driver/mapping/annotations/Table.html) and updates the keyspace accordingly. CRUD & other native queries should be handled with the [Java Driver](https://github.com/datastax/java-driver)'s [object mapper](https://github.com/datastax/java-driver/tree/3.x/manual/object_mapper).
 
 
 # Sample Usage
