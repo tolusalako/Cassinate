@@ -1,0 +1,55 @@
+repositories {
+    jcenter()
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+version = 1.0
+
+dependencies {
+    compile group: 'com.datastax.cassandra', name: 'cassandra-driver-core', version: '3.1.0'
+    compile group: 'com.datastax.cassandra', name: 'cassandra-driver-mapping', version: '3.1.0'
+    compile group: 'com.datastax.cassandra', name: 'cassandra-driver-extras', version: '3.1.0'
+    compile group: 'commons-configuration', name: 'commons-configuration', version: '1.10'
+    compile group: 'io.github.lukehutch', name: 'fast-classpath-scanner', version: '2.0.9'
+    compile group: 'com.google.inject', name: 'guice', version: '4.1.0'
+    compile group: 'commons-io', name: 'commons-io', version: '2.5'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.22'
+
+    // testCompile("org.testng:testng:6.8")
+}
+
+
+// pom {
+//     project {
+//         inceptionYear '2017'
+//         licenses {
+//             license {
+//                 name 'MIT License'
+//                 url 'https://github.com/tolusalako/Cassinate/blob/master/LICENSE'
+//                 distribution 'repo'
+//             }
+//         }
+//     }
+// }.writeTo("build/libs/${project.name}-${version}.pom")
+//
+
+
+
+clean{
+    delete "bin"
+    delete "build"
+    delete "test-output"
+    cleanEclipse
+}
+
+// test{
+//     useTestNG()
+//     ignoreFailures = true
+// }
